@@ -12,7 +12,8 @@ I worked for 5 years in an online store as a sales manager. And now I wanted to 
 ---
 
 ## *Skills:*
-* JS, CSS, HTML, Figma, Git video courses on YouTube
+JS, CSS, HTML, Figma, Git video courses on YouTube
+
 ---
 ## *Code examples:*
 ```
