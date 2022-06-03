@@ -20,6 +20,7 @@ function multiply(a, b){
 return a * b
 }
 ```
+
 ---
 ## *Education:*
 * __Francisk Skorina Gomel State University__
