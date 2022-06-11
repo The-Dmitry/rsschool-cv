@@ -1,1 +1,44 @@
 body{}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.navigation {
+}
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+}
+.nav-item {
+}
+.section {
+}
+.photo {
+}
+.name {
+}
+.section__title {
+}
+.text {
+}
+.skills_list {
+}
+.js {
+}
+.css {
+}
+.HTML {
+}
+.Figma {
+}
+.Git {
+}
+.flex-container {
+}
+.education {
+}
+.university {
+}
+.languages {
+}
