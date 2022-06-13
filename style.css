@@ -15,8 +15,10 @@ img{vertical-align:top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 
 html {
+    font-family: 'Roboto', sans-serif;
     font-size: 10px;
     color: rgb(201, 200, 200);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -24,68 +26,113 @@ body {
     background: url(/image/footer_lodyas.png);
 }
 
+.lock {
+    overflow: hidden;
+}
+
 .wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
     background-color: rgb(43, 42, 47);
 }
+
 .navigation {
-    height: 10px;
-    background-color: rgb(239, 219, 0);
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    height: 100vh;
+    width: 50%;
+    padding: 15px;
+    background-color: rgb(0, 0, 0);
+    z-index: 10;
+    transition: all 0.3s linear;
+    overflow: auto;
 }
+
+.navigation_opened {
+    visibility: visible;
+    right: 0px;
+}
+
 .nav-list {
+    padding: 50px 0 0 5px;
     display: flex;
-    justify-content: space-around;
-    height: 100%;
-    align-items: center;
+    flex-direction: column;
 }
 .nav-item {
-    font-size: 2.5rem;
+    padding: 15px 0;
+    position: relative;
+    padding-bottom: 10px;
+    font-size: 2rem;
+    line-height: 40px;
 }
-.nav-item_link {
+
+.nav-item a {
+    color: rgb(255, 225, 0);
+}
+
+.nav-item::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 0.5px;
+    border: 0.5px dashed rgb(255, 225, 0);
+}
+
+.bg_active{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 5;
+    overflow: hidden;
 }
 
 main {
     display: flex;
-    /* flex-wrap: wrap; */
 }
 
 .first-column {
     flex: 1 1 auto;
-    padding: 50px 25px 25px 25px;
-    background-color: #232323;
+    padding: 40px 25px 25px 25px;
+    background-color: #1f1f1f;
 }
 
 .second_column {
     flex: 1 1 auto;
-    padding: 50px 25px 25px 25px;
+    padding: 25px 25px 25px 25px;
+    background: url(/image/dark-honeycomb.png)
 }
 
-.section {
-    /* padding: 25px; */
-    
-}
-
-/* .section_wrapper {
-    background: rgb(0,0,0);
-    background: linear-gradient(185deg, rgba(0,0,0,1) 0%, rgba(54,54,52,1) 0%, rgba(79,79,79,1) 40%);
-} */
 .section_promo {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .photo {
     padding-bottom: 60px;
 }
+
 .photo>img {
     height: 300px;
     border-radius: 50%;
-    border: 3px solid rgb(255, 234, 0);
+    border: 3px solid rgb(255, 225, 0);
 }
+
 .name {
-    color: #ffee00;
+    color: rgb(255, 225, 0);
     font-size: 5rem;
+    font-weight: 500;
     text-transform: uppercase;
     padding-bottom: 40px;
 }
@@ -95,21 +142,11 @@ main {
     flex-direction: column;
 }
 
-.section {
-    /* padding-bottom: 50px; */
-}
-
-.contact_title {
-}
-
 .contact__list {
     font-size: 2.5rem;
-    width: min-content;
     padding: 30px 0 0 37px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 }
+
 .contact__item {
     display: flex;
     position: relative;
@@ -118,7 +155,7 @@ main {
 }
 
 .contact__item:last-child {
-    padding-bottom: 50px;
+    padding-bottom: 35px;
 }
 
 .address::before {
@@ -135,6 +172,27 @@ main {
     left: -38px;
 }
 
+.email:hover {
+    text-decoration: underline;
+}
+
+.git {
+    color: aliceblue;
+}
+
+.git:hover {
+    text-decoration: underline;
+}
+
+.git::before {
+    content: "";
+    position: absolute;
+    background: url(/image/svg/github.png);
+    height: 38px;
+    width: 38px;
+    top: 3px;
+    left: -39px;
+}
 
 .discord::before {
     content: url(/image/svg/discord.svg);
@@ -143,8 +201,8 @@ main {
     left: -38px;
 }
 
-.email_link {
- color: aliceblue;
+a {
+    color: rgb(201, 200, 200);
 }
 
 .contact__item>img {
@@ -153,7 +211,9 @@ main {
 }
 .section__title {
     position: relative;
-    font-size: 3rem;
+    padding-top: 15px ;
+    font-size: 3.5rem;
+    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 8px;
     line-height: 20px;
@@ -162,16 +222,18 @@ main {
 .section__title::before {
     content: "";
     position: absolute;
-    top: 35px;
+    top: 50px;
     left: 0;
     width: 100%;
     height: 0.5px;
-    background: rgb(246, 255, 0);
+    background: rgb(255, 225, 0);
 }
 
 .skills_list {
     padding: 30px 0 0 37px;
-    font-size: 25px;
+    font-style: italic;
+    font-size: 2.5rem;
+    color: rgb(255, 225, 0);
 }
 
 .skills_list li {
@@ -186,13 +248,11 @@ main {
     height: 35px;
     width: 35px;
     display: inline-block;
-
 }
 
 .js::before {
     content: "";
     background: url(/image/svg/java-script.png) 0 0/auto 100% no-repeat;
-    
 }
 
 .css::before {
@@ -209,26 +269,155 @@ main {
     content: "";
     background: url(/image/svg/figma.png) 0 0/auto 100% no-repeat;
 }
+
 .git::before {
     content: "";
     background: url(/image/svg/github.png) 0 0/auto 100% no-repeat;
 }
 
 .text {
-    padding: 40px 0;
+    padding: 50px 0 35px 0;
     font-size: 2.5rem;
     line-height: 3rem;
+    font-weight: 300;
 }
 
 .code__example {
-    padding: 40px 0;
+    margin: 50px 0 35px 0;
+    padding: 20px 20px;
+    background-color: #1f1f1f;
+    border-radius: 20px;
+    font-size: 2rem;
+    font-style: italic;
 }
 
-.education {
-}
+
 .university {
-}
-.languages {
+    padding: 40px 0 15px 0;
 }
 
+.university>h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 15px 0;
+}
 
+.university ul {
+    padding-left: 30px;
+}
+
+.faculty {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 400;
+    list-style: circle;
+}
+
+.youtube {
+    font-size: 3rem;
+    padding: 25px 0 25px 0;
+}
+
+.section_languages>ul {
+    padding: 40px 25px;
+}
+
+.section_languages>ul>li {
+    padding-bottom: 15px;
+    font-size: 2.5rem;
+    font-weight: 300;
+    list-style: circle;
+}
+
+.footer {
+    display: flex;
+    background-color: rgb(255, 225, 0);
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    font-size: 2rem;
+}
+
+.footer a{
+    color: black;
+}
+
+.school-link img {
+    height: 50px;
+}
+
+.menu {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    main {
+        flex-wrap: wrap;
+    }
+
+    .name {
+        text-align: center;
+    }
+
+    .section__title {
+        text-align: center;
+    }
+
+    .skills_list {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .menu {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 12;
+        background-color: inherit;
+        border: 2px solid #fffdfd;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        padding: 0;
+      }
+      .line {
+        fill: none;
+        stroke: rgb(255, 255, 255);
+        stroke-width: 6;
+        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+          stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .line1 {
+        stroke-dasharray: 60 207;
+        stroke-width: 6;
+      }
+      .line2 {
+        stroke-dasharray: 60 60;
+        stroke-width: 6;
+      }
+      .line3 {
+        stroke-dasharray: 60 207;
+        stroke-width: 6;
+      }
+      .opened .line1 {
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 6;
+      }
+      .opened .line2 {
+        stroke-dasharray: 1 60;
+        stroke-dashoffset: -30;
+        stroke-width: 6;
+      }
+      .opened .line3 {
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 6;
+      }
+}
+
+@media (max-width: 550px) {
+    html {
+        font-size: 8px;
+    }
+}
