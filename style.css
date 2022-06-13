@@ -19,6 +19,7 @@ html {
     font-size: 10px;
     color: rgb(201, 200, 200);
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
@@ -34,8 +35,6 @@ body {
 
 .wrapper {
     position: relative;
-    display: flex;
-    flex-direction: column;
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
@@ -43,10 +42,9 @@ body {
 }
 
 .navigation {
-    visibility: hidden;
     position: fixed;
     top: 0;
-    right: -200px;
+    right: -50%;
     height: 100vh;
     width: 50%;
     padding: 15px;
@@ -57,7 +55,6 @@ body {
 }
 
 .navigation_opened {
-    visibility: visible;
     right: 0px;
 }
 
@@ -89,7 +86,7 @@ body {
 }
 
 .bg_active{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -105,12 +102,16 @@ main {
 }
 
 .first-column {
+    display: flex;
+    flex-direction: column;
     flex: 1 1 auto;
     padding: 40px 25px 25px 25px;
     background-color: #1f1f1f;
 }
 
 .second_column {
+    display: flex;
+    flex-direction: column;
     flex: 1 1 auto;
     padding: 25px 25px 25px 25px;
     background: url(image/dark-honeycomb.png)
@@ -237,6 +238,9 @@ a {
     font-style: italic;
     font-size: 2.5rem;
     color: rgb(255, 225, 0);
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .skills_list li {
@@ -355,7 +359,7 @@ a {
 
 @media (max-width: 1000px) {
     main {
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 
     .name {
@@ -417,6 +421,16 @@ a {
         stroke-dashoffset: -134;
         stroke-width: 6;
       }
+
+      .skills_list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;   
+    }
+
+    .skills_list li {
+        margin: 0 30px;
+    }
 }
 
 @media (max-width: 550px) {
