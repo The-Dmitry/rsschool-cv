@@ -23,7 +23,9 @@ html {
 
 body {
     height: 100%;
+    width: 100%;
     background: url(image/footer_lodyas.png);
+    
 }
 
 .lock {
@@ -35,6 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 1200px;
+    height: 100%;
     margin: 0 auto;
     background-color: rgb(43, 42, 47);
 }
@@ -124,7 +127,7 @@ main {
 }
 
 .photo>img {
-    height: 300px;
+    max-height: 300px;
     border-radius: 50%;
     border: 3px solid rgb(255, 225, 0);
 }
