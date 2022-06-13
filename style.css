@@ -1,0 +1,440 @@
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    color: rgb(201, 200, 200);
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: url(image/footer_lodyas.png);
+    
+}
+
+.lock {
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: rgb(43, 42, 47);
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    height: 100vh;
+    width: 50%;
+    padding: 15px;
+    background-color: rgb(0, 0, 0);
+    z-index: 10;
+    transition: all 0.3s linear;
+    overflow: auto;
+}
+
+.navigation_opened {
+    right: 0px;
+}
+
+.nav-list {
+    padding: 50px 0 0 5px;
+    display: flex;
+    flex-direction: column;
+}
+.nav-item {
+    padding: 15px 0;
+    position: relative;
+    padding-bottom: 10px;
+    font-size: 2rem;
+    line-height: 40px;
+}
+
+.nav-item a {
+    color: rgb(255, 225, 0);
+}
+
+.nav-item::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 0.5px;
+    border: 0.5px dashed rgb(255, 225, 0);
+}
+
+.bg_active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 5;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+}
+
+.first-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 40px 25px 25px 25px;
+    background-color: #1f1f1f;
+}
+
+.second_column {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 25px 25px 25px 25px;
+    background: url(image/dark-honeycomb.png)
+}
+
+.section_promo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo {
+    padding-bottom: 60px;
+}
+
+.photo>img {
+    max-height: 300px;
+    border-radius: 50%;
+    border: 3px solid rgb(255, 225, 0);
+}
+
+.name {
+    color: rgb(255, 225, 0);
+    font-size: 5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__list {
+    font-size: 2.5rem;
+    padding: 30px 0 0 37px;
+}
+
+.contact__item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 10px 2px;
+}
+
+.contact__item:last-child {
+    padding-bottom: 35px;
+}
+
+.address::before {
+    content: url(image/svg/geo-alt.svg);
+    position: absolute;
+    top: 4px;
+    left: -40px;
+}
+
+.email::before {
+    content: url(image/svg/envelope-fill.svg);
+    position: absolute;
+    top: 4px;
+    left: -38px;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
+.git {
+    color: aliceblue;
+}
+
+.git:hover {
+    text-decoration: underline;
+}
+
+.git::before {
+    content: "";
+    position: absolute;
+    background: url(image/svg/github.png);
+    height: 38px;
+    width: 38px;
+    top: 3px;
+    left: -39px;
+}
+
+.discord::before {
+    content: url(image/svg/discord.svg);
+    position: absolute;
+    top: 3px;
+    left: -38px;
+}
+
+a {
+    color: rgb(201, 200, 200);
+}
+
+.contact__item>img {
+    height: 40px;
+    padding-right: 15px;
+}
+.section__title {
+    position: relative;
+    padding-top: 15px ;
+    font-size: 3.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    line-height: 20px;
+}
+
+.section__title::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 0.5px;
+    background: rgb(255, 225, 0);
+}
+
+.skills_list {
+    padding: 30px 0 0 37px;
+    font-style: italic;
+    font-size: 2.5rem;
+    color: rgb(255, 225, 0);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.skills_list li {
+    line-height: 50px;
+    position: relative;
+}
+
+.skills_list li::before {
+    position: absolute;
+    top: 7px;
+    left: -38px;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+}
+
+.js::before {
+    content: "";
+    background: url(image/svg/java-script.png) 0 0/auto 100% no-repeat;
+}
+
+.css::before {
+    content: "";
+    background: url(image/svg/css.png) 0 0/auto 100% no-repeat;
+}
+
+.html::before {
+    content: "";
+    background: url(image/svg/html.png) 0 0/auto 100% no-repeat;
+}
+
+.figma::before {
+    content: "";
+    background: url(image/svg/figma.png) 0 0/auto 100% no-repeat;
+}
+
+.git::before {
+    content: "";
+    background: url(image/svg/github.png) 0 0/auto 100% no-repeat;
+}
+
+.text {
+    padding: 50px 0 35px 0;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 300;
+}
+
+.code__example {
+    margin: 50px 0 35px 0;
+    padding: 20px 20px;
+    background-color: #1f1f1f;
+    border-radius: 20px;
+    font-size: 2rem;
+    font-style: italic;
+}
+
+
+.university {
+    padding: 40px 0 15px 0;
+}
+
+.university>h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 15px 0;
+}
+
+.university ul {
+    padding-left: 30px;
+}
+
+.faculty {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 400;
+    list-style: circle;
+}
+
+.youtube {
+    font-size: 3rem;
+    padding: 25px 0 25px 0;
+}
+
+.section_languages>ul {
+    padding: 40px 25px;
+}
+
+.section_languages>ul>li {
+    padding-bottom: 15px;
+    font-size: 2.5rem;
+    font-weight: 300;
+    list-style: circle;
+}
+
+.footer {
+    display: flex;
+    background-color: rgb(255, 225, 0);
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    font-size: 2rem;
+}
+
+.footer a{
+    color: black;
+}
+
+.school-link img {
+    height: 50px;
+}
+
+.menu {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column;
+    }
+
+    .name {
+        text-align: center;
+    }
+
+    .section__title {
+        text-align: center;
+    }
+
+    .skills_list {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .menu {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 12;
+        background-color: inherit;
+        border: 2px solid #fffdfd;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        padding: 0;
+      }
+      .line {
+        fill: none;
+        stroke: rgb(255, 255, 255);
+        stroke-width: 6;
+        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+          stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .line1 {
+        stroke-dasharray: 60 207;
+        stroke-width: 6;
+      }
+      .line2 {
+        stroke-dasharray: 60 60;
+        stroke-width: 6;
+      }
+      .line3 {
+        stroke-dasharray: 60 207;
+        stroke-width: 6;
+      }
+      .opened .line1 {
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 6;
+      }
+      .opened .line2 {
+        stroke-dasharray: 1 60;
+        stroke-dashoffset: -30;
+        stroke-width: 6;
+      }
+      .opened .line3 {
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 6;
+      }
+
+      .skills_list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;   
+    }
+
+    .skills_list li {
+        margin: 0 30px;
+    }
+}
+
+@media (max-width: 550px) {
+    html {
+        font-size: 8px;
+    }
+}
