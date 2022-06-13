@@ -23,7 +23,7 @@ html {
 
 body {
     height: 100%;
-    background: url(/image/footer_lodyas.png);
+    background: url(image/footer_lodyas.png);
 }
 
 .lock {
@@ -110,7 +110,7 @@ main {
 .second_column {
     flex: 1 1 auto;
     padding: 25px 25px 25px 25px;
-    background: url(/image/dark-honeycomb.png)
+    background: url(image/dark-honeycomb.png)
 }
 
 .section_promo {
@@ -159,14 +159,14 @@ main {
 }
 
 .address::before {
-    content: url(/image/svg/geo-alt.svg);
+    content: url(image/svg/geo-alt.svg);
     position: absolute;
     top: 4px;
     left: -40px;
 }
 
 .email::before {
-    content: url(/image/svg/envelope-fill.svg);
+    content: url(image/svg/envelope-fill.svg);
     position: absolute;
     top: 4px;
     left: -38px;
@@ -187,7 +187,7 @@ main {
 .git::before {
     content: "";
     position: absolute;
-    background: url(/image/svg/github.png);
+    background: url(image/svg/github.png);
     height: 38px;
     width: 38px;
     top: 3px;
@@ -195,7 +195,7 @@ main {
 }
 
 .discord::before {
-    content: url(/image/svg/discord.svg);
+    content: url(image/svg/discord.svg);
     position: absolute;
     top: 3px;
     left: -38px;
@@ -252,27 +252,27 @@ a {
 
 .js::before {
     content: "";
-    background: url(/image/svg/java-script.png) 0 0/auto 100% no-repeat;
+    background: url(image/svg/java-script.png) 0 0/auto 100% no-repeat;
 }
 
 .css::before {
     content: "";
-    background: url(/image/svg/css.png) 0 0/auto 100% no-repeat;
+    background: url(image/svg/css.png) 0 0/auto 100% no-repeat;
 }
 
 .html::before {
     content: "";
-    background: url(/image/svg/html.png) 0 0/auto 100% no-repeat;
+    background: url(image/svg/html.png) 0 0/auto 100% no-repeat;
 }
 
 .figma::before {
     content: "";
-    background: url(/image/svg/figma.png) 0 0/auto 100% no-repeat;
+    background: url(image/svg/figma.png) 0 0/auto 100% no-repeat;
 }
 
 .git::before {
     content: "";
-    background: url(/image/svg/github.png) 0 0/auto 100% no-repeat;
+    background: url(image/svg/github.png) 0 0/auto 100% no-repeat;
 }
 
 .text {
