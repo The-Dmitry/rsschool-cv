@@ -18,8 +18,12 @@ JS, CSS, HTML, Figma, Git video courses on YouTube
 ## *Code examples:*
 ```
 function multiply(a, b){
-return a * b
+  return a * b
 }
 ```
 
+---
+## *Education:*
+* __Francisk Skorina Gomel State University__
++ Faculty of Foreign Languages
 ---
