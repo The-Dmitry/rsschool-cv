@@ -1,4 +1,4 @@
-[Markdown](https://GITHUB-USERNAME.github.io/rsschool-cv/cv)
+[Markdown](https://the-dmitry.github.io/rsschool-cv/cv)
 
 
-[Deploy](https://GITHUB-USERNAME.github.io/rsschool-cv/)
+[Deploy](https://the-dmitry.github.io/rsschool-cv/)
