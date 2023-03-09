@@ -14,15 +14,20 @@ const projects = [
     src: 'image/projects/puzzle.png',
     link: 'https://the-dmitry.github.io/puzzle/'
   },
-  // {
-  //   name: 'Momentum',
-  //   src: 'image/projects/momentum.png',
-  //   link: 'https://the-dmitry.github.io/Mometum-RS/'
-  // },
+  {
+    name: 'Momentum',
+    src: 'image/projects/momentum.png',
+    link: 'https://the-dmitry.github.io/Mometum-RS/'
+  },
   {
     name: 'SongBird',
     src: 'image/projects/songbird.png',
     link: 'https://the-dmitry-songbird.netlify.app/'
+  },
+  {
+    name: 'Plants',
+    src: 'image/projects/Plants.png',
+    link: 'https://the-dmitry.github.io/Plants/'
   },
 ]
 
