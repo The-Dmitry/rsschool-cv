@@ -1,20 +1,76 @@
-*{padding:0;margin:0;border:0;}
-*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
-:focus,:active{outline:none;}
-a:focus,a:active{outline:none;}
-nav,footer,header,aside{display:block;}
-html,body{height:100%;width:100%;font-size:100%;line-height:1;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
-input,button,textarea{font-family:inherit;}
-input::-ms-clear{display:none;}
-button{cursor:pointer;}
-button::-moz-focus-inner{padding:0;border:0;}
-a,a:visited{text-decoration:none;}
-ul li{list-style:none;}
-img{vertical-align:top;}
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
 
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
 }
@@ -24,7 +80,7 @@ a {
 }
 
 body {
-  background: url(image/seamless-1082986_640.jpg);
+  background: url(image/OC1Y8F0.jpg);
   color: white;
 }
 
@@ -39,7 +95,6 @@ body {
   box-shadow: 0px 0px 100px 46px rgba(0, 0, 0, 1);
 }
 
-
 .header {
   background-color: #f48c06;
   position: absolute;
@@ -51,9 +106,8 @@ body {
 }
 
 .header:hover {
-  height: 35px; 
+  height: 35px;
 }
-
 
 .navigation {
   height: 100%;
@@ -89,7 +143,7 @@ body {
 .main {
   flex: 1 1 100%;
   display: flex;
-  padding: 20px 0 0 0;
+  /* padding: 20px 0 0 0; */
 }
 
 .main .column:first-child {
@@ -132,16 +186,27 @@ body {
   top: 0;
   left: 0;
   transform: translate(-50%, -50%);
-  background: conic-gradient(#03071e, #370617, #6a040f, #9d0208, #d00000, #dc2f02, #e85d04, #f48c06, #faa307, #ffba08);
+  background: conic-gradient(
+    #03071e,
+    #370617,
+    #6a040f,
+    #9d0208,
+    #d00000,
+    #dc2f02,
+    #e85d04,
+    #f48c06,
+    #faa307,
+    #ffba08
+  );
   animation: round 5s linear infinite;
   z-index: 1;
 }
 
 @keyframes round {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  100%{
+  100% {
     transform: rotate(360deg);
   }
 }
@@ -263,25 +328,13 @@ body {
   background-color: #f48c06;
   z-index: -1;
   transform: skew(-13deg, 0deg);
-  transition: background-color linear 0.2s;
-  transition-delay: 0.2s;
-}
-
-.section:hover > .section-title::before {
-  width: 100%;
-  background-color: #e13e28de;
-  animation: size 0.8s linear 1;
-}
-
-.section:hover > .section-title {
-  color: white;
 }
 
 @keyframes size {
   0% {
     width: 100%;
   }
-  50%{
+  50% {
     width: 0%;
   }
   100% {
@@ -307,7 +360,8 @@ body {
 }
 
 .projects-list__item:hover {
-  transform: scale(1.05);
+  border: 2px solid #ff7700;
+  background-color: #ff7700;
   z-index: 5;
 }
 
@@ -326,14 +380,14 @@ body {
 
 .project-title {
   flex: 1 1 100%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.8rem;
 }
 
 .code__example {
   display: flex;
   justify-content: center;
-} 
+}
 
 .footer {
   display: flex;
@@ -363,7 +417,11 @@ body {
   box-sizing: border-box;
 }
 
-
+@media (min-width: 800px) {
+  .header {
+    display: none;
+  }
+}
 
 @media (max-width: 800px) {
   .main {
@@ -413,7 +471,7 @@ body {
   html {
     font-size: 14px;
   }
-  
+
   .burger {
     width: 50px;
     height: 50px;
@@ -471,5 +529,5 @@ body {
 
 .burger.active::before {
   bottom: 50%;
-  transform: translate(50%, 50%) rotate(45deg); 
+  transform: translate(50%, 50%) rotate(45deg);
 }
